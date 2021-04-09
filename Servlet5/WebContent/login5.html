@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트로 서블렛 요청하기</title>
+		<script type="text/javascript">
+			function fn_validate(){
+				//태그의 name 속성 사용
+				var frmLogin = document.frmLogin;
+				var user_id = frmLogin.user_id.value;
+				var user_pw = frmLogin.user_pw.value;
+				
+				// 값이 비었는지 확인
+				if((user_id.length ==0 || user_id =="")
+						||(user_pw.length ==0 || user_pw =="")){
+					alert("아이디와 비밀번호는 필수 입니다.");
+				}else{
+					// 서버에게 form 입력 값 전송
+					// method ="post", action="login5"로 지정
+					frmLogin.method ="post";
+					frmLogin.action ="login5";
+					frmLogin.submit();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="frmLogin"> <!-- method 디폴트 값이 get -->
+			아이디 : <input type="text" name="user_id"><br>
+			비밀번호 : <input type="password" name="user_pw"><br>
+			주소 : <input type="password" name="user_address"><br>
+			
+			<input type="submit" value="로그인"> <input type="reset" value="다시입력">
+		</form>
+	</body>
+</html>
