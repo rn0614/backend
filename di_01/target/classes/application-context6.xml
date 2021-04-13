@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.di.spring_xml_value_setter.Student">
+		<!-- Setter를 사용하여 값 설정 : name(Setter 메소드 이름) -->
+		<property name="no" value="2021001"/>
+		<property name="name" value="이몽룡"/>
+		<property name="department" value="컴퓨터학과"/>
+		<property name="year" value="2"/>
+	
+	
+	</bean>
+</beans>

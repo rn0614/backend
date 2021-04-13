@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.di.spring_xml_value_constructor.Student">
+		<!-- 생성자를 사용해서 값 설정 -->
+		<constructor-arg>
+			<value>2021002</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>홍길동</value>
+		</constructor-arg>
+		<constructor-arg value="경영학과" />
+		<constructor-arg value="4" />
+	</bean>
+</beans>

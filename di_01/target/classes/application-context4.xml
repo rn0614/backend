@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<!-- 스피커 빈 생성 -->
+	<bean id="speaker" class="com.di.spring_di_xml_setter_ex1.Speaker"/>
+	
+	<!-- 티비 빈 생성 -->
+	<bean id="tV" class="com.di.spring_di_xml_setter_ex1.TV" >
+		<property name="speaker" ref="speaker"/> <!-- speaker 의존성 주입 -->
+	</bean>
+</beans>

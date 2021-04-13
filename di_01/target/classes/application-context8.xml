@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bmi" class="com.di.spring_di_xml_value_setter.BMI"/>
+	
+	<bean id="member" class="com.di.spring_di_xml_value_setter.Member">
+		
+		<property name="bmi" ref="bmi"/>
+		
+		<!-- Setter를 사용하여 값 설정 : name(Setter 메소드 이름) -->
+		<property name="name" value="홍길동"/>
+		<property name="age" value="25"/>
+		<property name="height" value="175"/>
+		<property name="weight" value="70"/>
+		<property name="courses">
+			<list>
+				<value>수영</value>
+				<value>헬스</value>
+				<value>에어로빅</value>
+			</list>
+		</property>
+	</bean>
+</beans>
